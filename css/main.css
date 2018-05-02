@@ -165,6 +165,15 @@ header ul li a {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5);
+}
+
+@media (max-width:961px) {
+
+    #project-page .projects .project-button :hover{
+        -ms-transform: scale(1); /* IE 9 */
+        -webkit-transform: scale(1); /* Safari 3-8 */
+        transform: scale(1);
+    }
 
 }
 
