@@ -116,7 +116,18 @@ header #logo {
     left: 12px;
     top: 10px;
     width: 80px;
+    z-index: 10;
 }
+
+@media (max-width:961px) {
+
+    header #logo {
+        left: 76px;
+        top: 2px;
+    }
+
+}
+
 
 header nav {
     margin-top: 20px;
@@ -160,6 +171,16 @@ header ul li a {
 #project-page .projects .project-button a img {
     width: 200px;
 }
+
+@media (max-width:961px) {
+
+    #project-page .projects .project-button a img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
 
 #project-page .projects .projects-wrapper {
     text-align: center;
