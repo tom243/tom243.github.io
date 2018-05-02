@@ -4,6 +4,3 @@
 
 # ignore node/grunt dependency directories
 node_modules/
-
-# ignore composer vendor directory
-video/
