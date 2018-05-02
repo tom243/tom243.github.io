@@ -29,4 +29,8 @@ $( document ).ready(function() {
     $('.animate').scrolla({
         once: true
     });
+
+    var video = document.getElementById('video');
+    video.play();
+    video.loop = true;
 });
