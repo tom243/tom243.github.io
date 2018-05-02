@@ -1,0 +1,274 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    /*vertical-align: middle;*/
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+@font-face {
+    font-family: MontserratRegular;
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: OpenSansHebrewRegular;
+    src: url("../fonts/OpenSansHebrew-Regular.ttf");
+}
+
+body {
+    font-family: MontserratRegular, sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */  }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */
+
+    .wrapper {
+        width: 1366px;
+    }
+
+}
+
+header {
+    height: 60px;
+}
+
+header #logo {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    width: 80px;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    width: 480px;
+    margin: 38px 0 32px 154px;
+}
+
+header ul li {
+    display: inline-block;
+    padding-left: 70px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+
+#project-page video {
+    width: 100% !important;
+    height: auto !important;
+}
+
+#project-page .projects .project-button {
+    margin-top: 5%;
+    transition: transform .2s;
+}
+
+#project-page .projects .project-button :hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+
+}
+
+#project-page .projects .project-button a img {
+    width: 200px;
+}
+
+#project-page .projects .projects-wrapper {
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 35px;
+}
+
+/* CV matcher */
+
+#cv-matcher {
+
+}
+
+#cv-matcher h1 {
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#cv-matcher .project-description {
+    margin-bottom: 50px;
+}
+
+#cv-matcher video {
+    margin: 0 auto -7px;
+    display: block;
+}
+
+#cv-matcher .project-description p {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+#cv-matcher .images {
+    margin-bottom: 60px;
+}
+
+#cv-matcher .images img {
+    margin: 0 auto;
+    display: block;
+}
+
+/* magazine project */
+
+#magazine {
+
+}
+
+#magazine .images img {
+    margin: 0 auto;
+    display: block;
+}
+
+/* nerds project */
+
+#nerds {
+
+}
+
+#nerds .images img {
+    margin: 0 auto;
+    display: block;
+}
+
+/* fastlane project */
+
+.project-fastline {
+
+}
+
+#fastline .images img {
+    margin: -6px auto 0;
+    display: block;
+}
+
+#fastline .images .pic1 {
+    margin-top: 15px;
+    margin-bottom: -20%;
+}
+
+/* brochure-architect project */
+
+#brochure-architect {
+
+}
+
+#brochure-architect  > h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+#brochure-architect .content {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#brochure-architect .project-description {
+    vertical-align: top;
+    margin-top: 100px;
+    direction: rtl;
+    text-align: right;
+}
+
+#brochure-architect .project-description p{
+    line-height: 6px;
+    font-family: OpenSansHebrewRegular, sans-serif;
+    font-size: 14px;
+}
+
+#brochure-architect .images {
+    margin-top: 100px;
+}
+

@@ -1,0 +1,9 @@
+# file: ~/.gitignore_global
+.DS_Store
+.idea
+
+# ignore node/grunt dependency directories
+node_modules/
+
+# ignore composer vendor directory
+video/
