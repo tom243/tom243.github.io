@@ -111,26 +111,47 @@ header {
     height: 60px;
 }
 
-header #logo {
+header #logo-web {
     position: absolute;
     left: 12px;
     top: 10px;
     width: 80px;
     z-index: 10;
+    display: inline-block;
+}
+
+header #logo-mobile {
+    display: none;
 }
 
 @media (max-width:961px) {
 
-    header #logo {
-        left: 76px;
-        top: 2px;
+    header #logo-web {
+        display: none;
+    }
+
+    header #logo-mobile {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        display: inline-block;
+        width: 59px;
+        z-index: 10;
     }
 
 }
 
-
 header nav {
     margin-top: 20px;
+    margin-left: 100px;
+}
+
+@media (max-width:961px) {
+
+    header nav {
+        margin-left: 0;
+    }
+
 }
 
 header ul {
@@ -221,7 +242,7 @@ header ul li a {
 
 #cv-matcher .project-description p {
     text-align: center;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     font-size: 14px;
 }
