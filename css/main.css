@@ -146,6 +146,11 @@ header nav {
     margin-left: 100px;
 }
 
+header .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 3.5rem;
+    font-size: 14px
+}
+
 @media (max-width:961px) {
 
     header nav {
@@ -175,6 +180,7 @@ header ul li a {
 #project-page video {
     width: 100% !important;
     height: auto !important;
+    margin-top: 60px;
 }
 #project-page .projects {
     margin-bottom: 100px;
