@@ -30,7 +30,7 @@ $( document ).ready(function() {
         once: true
     });
 
-    // var video = document.getElementById('video');
-    // video.play();
+    var video =$("video");
+    video.play();
     // video.loop = true;
 });
