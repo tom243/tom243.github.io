@@ -177,11 +177,31 @@ header ul li a {
     font-size: 14px;
 }
 
-#project-page video {
-    width: 100% !important;
-    height: auto !important;
-    margin-top: 60px;
+/*#project-page video {*/
+    /*width: 100% !important;*/
+    /*height: auto !important;*/
+    /*margin-top: 60px;*/
+/*}*/
+
+/*
+- Video Wrapper can be any element
+- If the element is the height and width of the full screen this will still work
+*/
+#project-page .videoWrapper {
+    height:720px;
+    width:100%;
+    position:relative;
+    overflow:hidden;
 }
+
+#project-page .videoWrapper iframe {
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    bottom:0;
+}
+
 #project-page .projects {
     margin-bottom: 100px;
 }
