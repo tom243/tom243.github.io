@@ -17,19 +17,27 @@
 // }).resize();
 
 
-function sizeTheVideo() {
-    // - 1.78 is the aspect ratio of the video
-// - This will work if your video is 1920 x 1080
-// - To find this value divide the video's native width by the height eg 1920/1080 = 1.78
-    var aspectRatio = 1.78;
+function fakeClick(fn) {
+    var $a = $('<a href="#" id="fakeClick"></a>');
+    $a.bind("click", function(e) {
+        e.preventDefault();
+        fn();
+    });
 
-    var video = $('#videoWithJs iframe');
-    var videoHeight = video.outerHeight();
-    var newWidth = videoHeight * aspectRatio;
-    var halfNewWidth = newWidth / 2;
+    $("body").append($a);
 
-    //Define the new width and centrally align the iframe
-    video.css({"width": newWidth + "px", "left": "50%", "margin-left": "-" + halfNewWidth + "px"});
+    var evt,
+        el = $("#fakeClick").get(0);
+
+    if (document.createEvent) {
+        evt = document.createEvent("MouseEvents");
+        if (evt.initMouseEvent) {
+            evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+            el.dispatchEvent(evt);
+        }
+    }
+
+    $(el).remove();
 }
 
 $( document ).ready(function() {
@@ -38,13 +46,10 @@ $( document ).ready(function() {
         once: true
     });
 
-    // var video =$("video");
-    // video.play();
+    var video = $("video").get(0);
 
-    // // video.loop = true;
-    // sizeTheVideo();
-    // $(window).resize(function(){
-    //     sizeTheVideo();
-    // });
+    fakeClick(function() {
+        video.play();
+    });
 
 });
