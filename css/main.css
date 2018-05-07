@@ -183,27 +183,21 @@ header ul li a {
 
 #project-page .projects .project-button {
     margin-top: 5%;
-    transition: transform .2s;
+    cursor: pointer;
 }
 
 #project-page .projects .project-button :hover{
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    transform: scale(1.5);
 }
 
 @media (max-width:961px) {
 
     #project-page .projects .project-button :hover{
-        -ms-transform: scale(1); /* IE 9 */
-        -webkit-transform: scale(1); /* Safari 3-8 */
-        transform: scale(1);
     }
 
 }
 
 #project-page .projects .project-button a img {
-    width: 200px;
+    width: 315px;
 }
 
 @media (max-width:961px) {
