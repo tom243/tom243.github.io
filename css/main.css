@@ -197,7 +197,8 @@ header ul li a {
 }
 
 #project-page .projects .project-button a img {
-    width: 315px;
+    width: 285px;
+    padding: 5px;
 }
 
 @media (max-width:961px) {
