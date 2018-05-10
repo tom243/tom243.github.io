@@ -1,25 +1,19 @@
-// var $video  = $('video'),
-//     $window = $(window);
-//
-// $(window).resize(function(){
-//     var height = $window.height();
-//     $video.css('height', height);
-//
-//     var videoWidth = $video.width(),
-//         windowWidth = $window.width(),
-//         marginLeftAdjust =   (windowWidth - videoWidth) / 2;
-//
-//     $video.css({
-//         'height': height,
-//         'marginLeft' : marginLeftAdjust
-//     });
-//
-// }).resize();
+function normalizeVideoWidth() {
+    var width = $("#cv-matcher .images > img").width();
+    $("#cv-matcher #cv-matcher-video").css("width" , width);
+    $("#cv-matcher #cv-matcher-video > video").css("width" , width);
+}
 
 $( document ).ready(function() {
 
     $('.animate').scrolla({
         once: true
+    });
+
+    normalizeVideoWidth();
+
+    $( window ).resize(function() {
+        normalizeVideoWidth();
     });
 
 });

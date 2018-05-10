@@ -36,7 +36,6 @@ html {
     text-shadow: none;
 }
 
-
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
@@ -74,7 +73,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 @font-face {
     font-family: MontserratRegular;
     src: url("../fonts/Montserrat-Regular.ttf");
@@ -94,13 +92,28 @@ body {
     width: 100%;
 }
 
-@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */  }
-@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */
+@media (min-width: 320px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+}
 
+@media (min-width: 481px) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+
+@media (min-width: 641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+
+@media (min-width: 961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
     .wrapper {
         width: 1366px;
     }
@@ -124,7 +137,7 @@ header #logo-mobile {
     display: none;
 }
 
-@media (max-width:961px) {
+@media (max-width: 961px) {
 
     header #logo-web {
         display: none;
@@ -144,6 +157,7 @@ header #logo-mobile {
 header nav {
     margin-top: 20px;
     margin-left: 100px;
+    z-index: 10;
 }
 
 header .navbar-expand-lg .navbar-nav .nav-link {
@@ -151,7 +165,7 @@ header .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 14px
 }
 
-@media (max-width:961px) {
+@media (max-width: 961px) {
 
     header nav {
         margin-left: 0;
@@ -177,6 +191,14 @@ header ul li a {
     font-size: 14px;
 }
 
+.container {
+    margin-bottom: 40px;
+}
+
+#project-page #opening-video {
+    margin-top: 40px;
+}
+
 #project-page .projects {
     margin-bottom: 100px;
 }
@@ -186,14 +208,7 @@ header ul li a {
     cursor: pointer;
 }
 
-#project-page .projects .project-button :hover{
-}
-
-@media (max-width:961px) {
-
-    #project-page .projects .project-button :hover{
-    }
-
+#project-page .projects .project-button :hover {
 }
 
 #project-page .projects .project-button a img {
@@ -201,7 +216,7 @@ header ul li a {
     padding: 5px;
 }
 
-@media (max-width:961px) {
+@media (max-width: 961px) {
 
     #project-page .projects .project-button a img {
         width: 100%;
@@ -209,12 +224,48 @@ header ul li a {
     }
 }
 
-
-
 #project-page .projects .projects-wrapper {
     text-align: center;
     vertical-align: middle;
     margin-bottom: 35px;
+}
+
+
+
+/* About page */
+
+
+#about h1 {
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#about .images {
+    text-align: right;
+}
+
+#about .project-description p {
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 13.5px;
+}
+
+@media (max-width: 961px) {
+
+    #about .images {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #about .project-description p {
+    }
+
+    #about .project-description br {
+        display: none;
+    }
 }
 
 /* CV matcher */
@@ -234,9 +285,13 @@ header ul li a {
     margin-bottom: 50px;
 }
 
+#cv-matcher #cv-matcher-video {
+    margin: 0 auto;
+}
+
 #cv-matcher video {
-    margin: 0 auto -7px;
     display: block;
+    margin: 0 auto;
 }
 
 #cv-matcher .project-description p {
@@ -255,9 +310,7 @@ header ul li a {
     display: block;
 }
 
-/* lana project */
-
-/* CV matcher */
+/* Lana project */
 
 #lana {
 
@@ -334,30 +387,36 @@ header ul li a {
 
 }
 
-#brochure-architect  > h1 {
+#brochure-architect > h1 {
     text-align: center;
     font-weight: bold;
 }
 
-#brochure-architect .content {
-    margin: 0 auto;
-    width: 100%;
-}
-
 #brochure-architect .project-description {
-    vertical-align: top;
-    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     direction: rtl;
-    text-align: right;
 }
 
-#brochure-architect .project-description p{
-    line-height: 6px;
-    font-family: OpenSansHebrewRegular, sans-serif;
+#brochure-architect .project-description h2 {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#brochure-architect .project-description p {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
     font-size: 14px;
 }
 
 #brochure-architect .images {
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
+#brochure-architect .images img {
+    margin: 0 auto;
+    display: block;
+}
