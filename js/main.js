@@ -10,6 +10,10 @@ $( document ).ready(function() {
         once: true
     });
 
+    $(".navbar-toggler").click(function() {
+       $(this).toggleClass("is-active");
+    });
+
     normalizeVideoWidth();
 
     $( window ).resize(function() {
