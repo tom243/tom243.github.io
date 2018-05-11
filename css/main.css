@@ -122,6 +122,7 @@ body {
 
 header {
     height: 60px;
+    margin-bottom: 40px;
 }
 
 header .hamburger-box {
