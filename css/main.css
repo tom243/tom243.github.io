@@ -115,7 +115,7 @@ body {
 @media (min-width: 1281px) {
     /* hi-res laptops and desktops */
     .wrapper {
-        width: 1366px;
+        /*width: 1366px;*/
     }
 
 }
@@ -142,11 +142,16 @@ header #logo-mobile {
     right: 10px;
     top: 6px;
     display: inline-block;
-    width: 59px;
+    width: 80px;
     z-index: 10;
 }
 
 @media (max-width: 961px) {
+
+    header #logo-mobile {
+        width: 59px;
+    }
+
 
 
 }
