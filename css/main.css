@@ -270,32 +270,31 @@ header ul li a {
 }
 
 #project-page .project-text-area a {
-    color: #ffffff;
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
     width: 100%;
     height: 100%;
     display: block;
-    letter-spacing: 2px;
-    word-spacing: 4px;
 }
 
-#project-page .project-text-area a .title{
+#project-page .project-text-area .title{
     font-size: 22px;
     display: block;
 }
 
-#project-page .project-text-area a .category{
+#project-page .project-text-area .category{
     display: block;
     font-size: 18px;
 }
-
 
 #project-page .project-wrap:hover .project-text-area{
     opacity:1;
     bottom:0;
     transition:1s;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    color: #ffffff;
 }
 #project-page .project-wrap:hover .project-hover{
     transform:scale(1.3);
