@@ -79,12 +79,26 @@ textarea {
 }
 
 @font-face {
-    font-family: OpenSansHebrewRegular;
-    src: url("../fonts/OpenSansHebrew-Regular.ttf");
+    font-family: MontserratRegular;
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: LibreBaskervilleItalic;
+    src: url("../fonts/LibreBaskerville-Italic.otf");
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url("../fonts/Roboto-Regular.ttf");
 }
 
 body {
     font-family: MontserratRegular, sans-serif;
+}
+/* Fonts */
+.libre-baskerville-italic {
+    font-family: LibreBaskervilleItalic;
 }
 
 .wrapper {
@@ -130,8 +144,14 @@ header .hamburger-box {
     display: inline-block;
     width: 30px;
     height: 15px;
+
 }
 
+header .hamburger {
+    position: absolute;
+    right: 10px;
+    top: 19px;
+}
 header .hamburger-inner, header .hamburger-inner:after, header .hamburger-inner:before{
     width: 30px;
     height: 3px;
@@ -139,7 +159,7 @@ header .hamburger-inner, header .hamburger-inner:after, header .hamburger-inner:
 
 header #logo-mobile {
     position: absolute;
-    right: 10px;
+    left: 10px;
     top: 6px;
     display: inline-block;
     width: 80px;
@@ -152,12 +172,14 @@ header #logo-mobile {
         width: 59px;
     }
 
-
-
 }
 
 header nav {
     z-index: 10;
+}
+header nav .navbar-collapse {
+    margin-top: 65px;
+    text-align: right;
 }
 
 @media (max-width: 961px) {
