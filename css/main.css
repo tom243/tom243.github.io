@@ -228,11 +228,6 @@ header ul li a {
 #project-page .projects .project-button :hover {
 }
 
-#project-page .projects .project-button a img {
-    width: 285px;
-    padding: 5px;
-}
-
 @media (max-width: 961px) {
 
     #project-page .projects .project-button a img {
