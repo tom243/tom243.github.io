@@ -339,8 +339,17 @@ header ul li a {
 /* Contact page*/
 
 #contact .container-contact {
-    width: 40%;
+    width: 30%;
     margin:  0 auto 40px;
+}
+
+@media (max-width: 961px) {
+
+    #contact .container-contact {
+        width: 100%;
+        margin: 0 0 40px;
+        padding: 10px;
+    }
 }
 
 #contact h1 {
@@ -351,6 +360,14 @@ header ul li a {
 
 #contact .contact-details .email,  #contact .contact-details .phone {
     display: inline-block;
+}
+
+#contact .contact-details .email {
+    float: left;
+}
+
+#contact .contact-details .phone {
+    float: right;
 }
 
 #contact .contact-details{
@@ -558,4 +575,28 @@ header ul li a {
 #brochure-architect .images img {
     margin: 0 auto;
     display: block;
+}
+
+/* fashion project */
+
+#fashion .fashion-container {
+    margin-bottom: 100px;
+}
+
+#fashion .fashion-container h1{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#fashion .fashion-container #fashion-video video {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 961px) {
+
+    #fashion .fashion-container #fashion-video video {
+        width: 100%;
+    }
 }

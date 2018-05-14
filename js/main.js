@@ -7,9 +7,6 @@ function normalizeVideoWidth() {
 
 $(document).ready(function () {
 
-    // $('.animate').scrolla({
-    //     once: true
-    // });
 
     // Changing the defaults
     window.sr = ScrollReveal({reset: true});
