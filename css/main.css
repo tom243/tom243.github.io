@@ -78,6 +78,12 @@ textarea {
     src: url("../fonts/Montserrat-Regular.ttf");
 }
 
+
+@font-face {
+    font-family: MontserratMedium;
+    src: url("../fonts/Montserrat-Medium.ttf");
+}
+
 @font-face {
     font-family: MontserratExtraBold;
     src: url("../fonts/Montserrat-ExtraBold.ttf");
@@ -86,6 +92,11 @@ textarea {
 @font-face {
     font-family: LibreBaskervilleItalic;
     src: url("../fonts/LibreBaskerville-Italic.otf");
+}
+
+@font-face {
+    font-family: RobotoLight;
+    src: url("../fonts/Roboto-Light.ttf");
 }
 
 @font-face {
@@ -99,7 +110,7 @@ body {
 
 /* Fonts */
 .libre-baskerville-italic {
-    font-family: LibreBaskervilleItalic, sans-serif;;
+    font-family: LibreBaskervilleItalic, sans-serif !important;
 }
 
 .wrapper {
@@ -149,9 +160,12 @@ header .hamburger-box {
 }
 
 header .hamburger {
-    position: absolute;
-    right: 10px;
-    top: 19px;
+    margin-top: 10px;
+}
+
+header .hamburger:focus, header .hamburger:active{
+    outline: none !important;
+    box-shadow: none;
 }
 
 header .hamburger-inner, header .hamburger-inner:after, header .hamburger-inner:before {
@@ -178,10 +192,11 @@ header #logo-mobile {
 
 header nav {
     z-index: 10;
+    position: fixed !important;
+    width: 100%;
 }
 
 header nav .navbar-collapse {
-    margin-top: 65px;
     text-align: right;
 }
 
@@ -303,11 +318,14 @@ header ul li a {
 
 /* About page */
 
-#about h1 {
-    font-weight: bold;
-    margin-bottom: 35px;
+#about .headline {
+    margin-bottom: 40px;
+}
+
+#about .headline h1 {
     text-align: center;
-    font-size: 24px;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
 }
 
 #about .images {
@@ -319,6 +337,8 @@ header ul li a {
     width: 100%;
     margin: 0 auto;
     font-size: 13.5px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
 }
 
 @media (max-width: 961px) {
@@ -404,6 +424,7 @@ header ul li a {
     border: none;
     width: 100px;
     margin-left: calc(100% - 100px);
+    font-family: RobotoRegular, sans-serif;
 }
 
 #contact #contact-form input[type="text"], #contact #contact-form input[type="tel"],
@@ -426,19 +447,45 @@ header ul li a {
 
 /* CV matcher */
 
-#cv-matcher {
-
+#cv-matcher .headline {
+    margin-bottom: 20px;
 }
 
-#cv-matcher h1 {
-    font-weight: bold;
-    margin-bottom: 35px;
+#cv-matcher .headline h1 {
     text-align: center;
-    font-size: 24px;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#cv-matcher .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
 }
 
 #cv-matcher .project-description {
     margin-bottom: 50px;
+}
+
+#cv-matcher .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+@media (max-width: 961px) {
+
+    #cv-matcher .project-description p {
+        width: 80%;
+    }
+
+    #cv-matcher .project-description br {
+        display: none;
+    }
 }
 
 #cv-matcher #cv-matcher-video {
@@ -448,13 +495,6 @@ header ul li a {
 #cv-matcher video {
     display: block;
     margin: 0 auto;
-}
-
-#cv-matcher .project-description p {
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    font-size: 14px;
 }
 
 #cv-matcher .images {
@@ -468,15 +508,21 @@ header ul li a {
 
 /* Lana project */
 
-#lana {
-
+#lana .headline {
+    margin-bottom: 20px;
 }
 
-#lana h1 {
-    font-weight: bold;
-    margin-bottom: 35px;
+#lana .headline h1 {
     text-align: center;
-    font-size: 24px;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#lana .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
 }
 
 #lana .project-description {
@@ -485,12 +531,25 @@ header ul li a {
 
 #lana .project-description p {
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
 }
 
-#lana.images {
+@media (max-width: 961px) {
+
+    #lana .project-description p {
+        width: 80%;
+    }
+
+    #lana .project-description br {
+        display: none;
+    }
+}
+
+#lana .images {
     margin-bottom: 60px;
 }
 
@@ -501,8 +560,45 @@ header ul li a {
 
 /* magazine project */
 
-#magazine {
+#magazine .headline {
+    margin-bottom: 20px;
+}
 
+#magazine .headline h1 {
+    text-align: center;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#magazine .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+#magazine .project-description {
+    margin-bottom: 50px;
+}
+
+#magazine .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+@media (max-width: 961px) {
+
+    #magazine .project-description p {
+        width: 80%;
+    }
+
+    #magazine .project-description br {
+        display: none;
+    }
 }
 
 #magazine .images img {
@@ -512,8 +608,45 @@ header ul li a {
 
 /* nerds project */
 
-#nerds {
+#nerds .headline {
+    margin-bottom: 20px;
+}
 
+#nerds .headline h1 {
+    text-align: center;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#nerds .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+#nerds .project-description {
+    margin-bottom: 50px;
+}
+
+#nerds .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+@media (max-width: 961px) {
+
+    #nerds .project-description p {
+        width: 80%;
+    }
+
+    #nerds .project-description br {
+        display: none;
+    }
 }
 
 #nerds .images img {
@@ -523,53 +656,102 @@ header ul li a {
 
 /* fastlane project */
 
-.project-fastline {
-
+#fastlane .headline {
+    margin-bottom: 20px;
 }
 
-#fastline .images img {
+#fastlane .headline h1 {
+    text-align: center;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#fastlane .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+#fastlane .project-description {
+    margin-bottom: 50px;
+}
+
+#fastlane .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+@media (max-width: 961px) {
+
+    #fastlane .project-description p {
+        width: 80%;
+    }
+
+    #fastlane .project-description br {
+        display: none;
+    }
+}
+
+#fastlane .images img {
     margin: -6px auto 0;
     display: block;
 }
 
-#fastline .images .pic1 {
+#fastlane .images .pic1 {
     margin-top: 15px;
     margin-bottom: -20%;
 }
 
 /* brochure-architect project */
 
-#brochure-architect {
-
+#brochure-architect .headline {
+    margin-bottom: 20px;
 }
 
-#brochure-architect > h1 {
+#brochure-architect .headline h1 {
     text-align: center;
-    font-weight: bold;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#brochure-architect .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
 }
 
 #brochure-architect .project-description {
     margin-bottom: 50px;
-    margin-top: 50px;
-    direction: rtl;
-}
-
-#brochure-architect .project-description h2 {
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
 }
 
 #brochure-architect .project-description p {
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+@media (max-width: 961px) {
+
+    #brochure-architect .project-description p {
+        width: 80%;
+    }
+
+    #brochure-architect .project-description br {
+        display: none;
+    }
 }
 
 #brochure-architect .images {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 #brochure-architect .images img {
@@ -580,12 +762,48 @@ header ul li a {
 /* fashion project */
 
 #fashion .fashion-container {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
-#fashion .fashion-container h1{
+#fashion .headline {
+    margin-bottom: 20px;
+}
+
+#fashion .headline h1 {
     text-align: center;
-    margin-bottom: 100px;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#fashion .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+#fashion .project-description {
+    margin-bottom: 50px;
+}
+
+#fashion .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+@media (max-width: 961px) {
+
+    #fashion .project-description p {
+        width: 80%;
+    }
+
+    #fashion .project-description br {
+        display: none;
+    }
 }
 
 #fashion .fashion-container #fashion-video video {
