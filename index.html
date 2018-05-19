@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" ng-app="portfolioApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -15,14 +15,20 @@
     <link rel="stylesheet" href="css/hamburgers.min.css">
     <link rel="stylesheet" href="css/main.css">
 
-</head>
-<body>
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/vendor/scrollreveal.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <!-- load angular and angular route via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="js/main.js"></script>
 
-<div class="wrapper" id="project-page">
+</head>
+<body ng-controller="mainController">
 
     <header>
         <nav class="navbar navbar-light bg-white">
-            <a href="index.html">
+            <a href="#">
                 <img id="logo-mobile" src="img/logo.png"/>
             </a>
             <button class="navbar-toggler hamburger hamburger--spin" type="button" data-toggle="collapse"
@@ -34,121 +40,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="index.html">HOME</a>
-                    <a class="nav-item nav-link" href="about.html">ABOUT</a>
-                    <a class="nav-item nav-link" href="contact.html">CONTACT</a>
+                    <a class="nav-item nav-link active" href="#">HOME</a>
+                    <a class="nav-item nav-link" href="#about">ABOUT</a>
+                    <a class="nav-item nav-link" href="#contact">CONTACT</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="embed-responsive embed-responsive-16by9" id="opening-video">
-        <video autoplay muted loop playsinline class="embed-responsive-item">
-            <source src="video/opening.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+
+        <div ng-view></div>
     </div>
-
-    <div class="container-fluid projects">
-        <div class="row no-gutters projects-wrapper">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 project-button">
-                <a href="project-fastlane.html" class="project-fastline">
-                    <div class="project-wrap">
-                        <img class="project-hover" src="img/projects/buttons/button-fastlane.jpg">
-                        <div class="project-text-area">
-                            <span class="title">FAST LANE</span>
-                            <span class="category">UI/UX</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 project-button">
-                <a href="project-nerds.html" class="project-nerds">
-                    <div class="project-wrap">
-                        <img class="project-hover" src="img/projects/buttons/button-nerds.jpg">
-                        <div class="project-text-area">
-                            <span class="title">GEEK MAGAZINE</span>
-                            <span class="category">PRINT</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 project-button">
-                <a href="project-magazine.html" class="project-magazine">
-                    <div class="project-wrap">
-                        <img class="project-hover" src="img/projects/buttons/button-magazine.jpg">
-                        <div class="project-text-area">
-                            <span class="title">ALL SIZES</span>
-                            <span class="category">PRINT</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 project-button">
-                <a href="project-cv-matcher.html" class="project-cv-matcher">
-                    <div class="project-wrap">
-                        <img class="project-hover" src="img/projects/buttons/button-cv-matcher.jpg">
-                        <div class="project-text-area">
-                            <span class="title">CV WEBSITE</span>
-                            <span class="category">UI/UX</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 project-button">
-                <a href="project-brochure.html" class="project-brochure-architect">
-                    <div class="project-wrap">
-                        <img class="project-hover" src="img/projects/buttons/button-brochure.jpg">
-                        <div class="project-text-area">
-                            <span class="title">SHIN TAKAMATSU</span>
-                            <span class="category">PRINT</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 project-button">
-                <a href="project-lana.html" class="project-lana">
-                    <div class="project-wrap">
-                        <img class="project-hover" src="img/projects/buttons/button-lana.jpg">
-                        <div class="project-text-area">
-                            <span class="title">LANA DEL REY</span>
-                            <span class="category">PRINT</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 project-button">
-                <a href="project-fashion.html" class="project-fastline">
-                    <div class="project-wrap">
-                        <img class="project-hover" src="img/projects/buttons/button-fashion.jpg">
-                        <div class="project-text-area">
-                            <span class="title">ADVA AHARON</span>
-                            <span class="category">UI/UX</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 project-button">
-                <a href="project-nerds.html" class="project-nerds">
-                    <div class="project-wrap">
-                        <img class="project-hover" src="img/projects/buttons/button-nerds.jpg">
-                        <div class="project-text-area">
-                            <span class="title">GEEK MAGAZINE</span>
-                            <span class="category">PRINT</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<script src="js/vendor/jquery-3.2.1.min.js"></script>
-<script src="js/vendor/scrollreveal.min.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
 
 </body>
 </html>
