@@ -333,6 +333,10 @@ header ul li a {
     text-align: right;
 }
 
+#about .project-description {
+    position: relative;
+}
+
 #about .project-description p {
     text-align: left;
     width: 100%;
@@ -340,6 +344,27 @@ header ul li a {
     font-size: 13.5px;
     line-height: 24px;
     font-family: RobotoLight, sans-serif;
+}
+
+#about .project-description .cv {
+    position: absolute;
+    bottom: 0;
+}
+
+#about .project-description .cv .object {
+    width: 215px;
+    height: 6px;
+    background-color: #ef8fd7;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#about .project-description .cv a {
+    display: inline-block;
+    font-family: RobotoRegular, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
 }
 
 @media (max-width: 961px) {
