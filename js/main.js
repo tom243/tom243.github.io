@@ -77,7 +77,45 @@ function scrollTop() {
     $(window).scrollTop(0);
 }
 
+
+function EnableBrowserButtons(index) {
+
+    if (index === 0) {
+        $(".prev-button").attr("disabled", true);
+    }
+
+    if (index === projectArr.length - 1) {
+        $(".next-button").attr("disabled", true);
+    }
+
+    $(".prev-button").click(function () {
+        if (index < projectArr.length && index >= 0) {
+            index--;
+            window.location.href = "#" + projectArr[index];
+        }
+    });
+
+    $(".next-button").click(function () {
+        if (index < projectArr.length && index >= 0) {
+            index++;
+            window.location.href = "#" + projectArr[index];
+        }
+    });
+
+}
+
 /* End Utils */
+
+/* End Common functions */
+
+/* Common vars */
+
+var projectArr = [
+    "project-brochure", "project-cv-matcher", "project-fashion", "project-fastlane", "project-lana", "project-magazine",
+    "project-nerds"
+];
+
+/* End Common vars */
 
 /* Common functions */
 
@@ -87,104 +125,101 @@ angular.element(document).ready(function () {
         $(this).toggleClass("is-active");
     });
 
-    $('.navbar-nav a').on('click', function(){
+    $('.navbar-nav a').on('click', function () {
         $('.navbar-toggler').click() //bootstrap 3.x by Richard
     });
 
 });
 
-/* End Common functions */
-
 // configure our routes
-portfolioApp.config(function($routeProvider) {
+portfolioApp.config(function ($routeProvider) {
     $routeProvider
 
     // route for the home page
         .when('/', {
-            templateUrl : 'pages/home.html',
-            controller  : 'mainController'
+            templateUrl: 'pages/home.html',
+            controller: 'mainController'
         })
 
         // route for the about page
         .when('/about', {
-            templateUrl : 'pages/about.html',
-            controller  : 'aboutController'
+            templateUrl: 'pages/about.html',
+            controller: 'aboutController'
         })
 
         // route for the contact page
         .when('/contact', {
-            templateUrl : 'pages/contact.html',
-            controller  : 'contactController'
+            templateUrl: 'pages/contact.html',
+            controller: 'contactController'
         })
 
         // route for the project-brochure page
         .when('/project-brochure', {
-            templateUrl : 'pages/project-brochure.html',
-            controller  : 'projectBrochureController'
+            templateUrl: 'pages/project-brochure.html',
+            controller: 'projectBrochureController'
         })
 
         // route for the project-cv-matcher page
         .when('/project-cv-matcher', {
-            templateUrl : 'pages/project-cv-matcher.html',
-            controller  : 'projectCvMatcher'
+            templateUrl: 'pages/project-cv-matcher.html',
+            controller: 'projectCvMatcher'
         })
 
         // route for the project-fashion page
         .when('/project-fashion', {
-            templateUrl : 'pages/project-fashion.html',
-            controller  : 'projectFashionController'
+            templateUrl: 'pages/project-fashion.html',
+            controller: 'projectFashionController'
         })
 
         // route for the project-fastlane page
         .when('/project-fastlane', {
-            templateUrl : 'pages/project-fastlane.html',
-            controller  : 'projectFastlaneController'
+            templateUrl: 'pages/project-fastlane.html',
+            controller: 'projectFastlaneController'
         })
 
         // route for the project-lana page
         .when('/project-lana', {
-            templateUrl : 'pages/project-lana.html',
-            controller  : 'projectLanaController'
+            templateUrl: 'pages/project-lana.html',
+            controller: 'projectLanaController'
         })
 
         // route for the project-magazine page
         .when('/project-magazine', {
-            templateUrl : 'pages/project-magazine.html',
-            controller  : 'projectMagazineController'
+            templateUrl: 'pages/project-magazine.html',
+            controller: 'projectMagazineController'
         })
 
         // route for the project-nerds page
         .when('/project-nerds', {
-            templateUrl : 'pages/project-nerds.html',
-            controller  : 'projectNerdsController'
+            templateUrl: 'pages/project-nerds.html',
+            controller: 'projectNerdsController'
         });
 
 });
 
 // create the controller and inject Angular's $scope
-portfolioApp.controller('mainController', function($scope) {
-    // create a message to display in our view
+portfolioApp.controller('mainController', function ($scope) {
     scrollTop();
-    $scope.message = 'Everyone come and see how good I look!';
 });
 
-portfolioApp.controller('aboutController', function($scope) {
+portfolioApp.controller('aboutController', function ($scope) {
     scrollTop();
-    $scope.message = 'Look! I am an about page.';
 });
 
-portfolioApp.controller('contactController', function($scope) {
+portfolioApp.controller('contactController', function ($scope) {
     scrollTop();
-    $scope.message = 'Contact us! JK. This is just a demo.';
 });
 
-portfolioApp.controller('projectBrochureController', function($scope) {
+portfolioApp.controller('projectBrochureController', function ($scope) {
     scrollTop();
     scrollReval();
-    $scope.message = 'projectBrochureController';
+
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(0);
+    });
 });
 
-portfolioApp.controller('projectCvMatcher', function($scope) {
+portfolioApp.controller('projectCvMatcher', function ($scope) {
 
     function normalizeVideoWidth() {
         var width = $("#cv-matcher .images > img").width();
@@ -192,42 +227,61 @@ portfolioApp.controller('projectCvMatcher', function($scope) {
         $("#cv-matcher #cv-matcher-video > video").css("width", width);
     }
 
-    scrollTop();
-    normalizeVideoWidth();
-    scrollReval();
-
-    $(window).resize(function () {
+    angular.element(document).ready(function () {
         normalizeVideoWidth();
+        $(window).resize(function () {
+            normalizeVideoWidth();
+        });
+        EnableBrowserButtons(1);
     });
 
-    $scope.message = 'projectCvMatcher';
-});
-
-portfolioApp.controller('projectFashionController', function($scope) {
-    scrollTop();
-    $scope.message = 'projectFashionController';
-});
-
-portfolioApp.controller('projectFastlaneController', function($scope) {
     scrollTop();
     scrollReval();
-    $scope.message = 'projectFastlaneController';
 });
 
-portfolioApp.controller('projectLanaController', function($scope) {
+portfolioApp.controller('projectFashionController', function ($scope) {
     scrollTop();
-    scrollReval();
-    $scope.message = 'projectLanaController';
+
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(2);
+    });
+
 });
 
-portfolioApp.controller('projectMagazineController', function($scope) {
+portfolioApp.controller('projectFastlaneController', function ($scope) {
     scrollTop();
     scrollReval();
-    $scope.message = 'projectMagazineController';
+
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(3);
+    });
+
 });
 
-portfolioApp.controller('projectNerdsController', function($scope) {
+portfolioApp.controller('projectLanaController', function ($scope) {
     scrollTop();
     scrollReval();
-    $scope.message = 'projectNerdsController';
+
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(4);
+    });
+
+});
+
+portfolioApp.controller('projectMagazineController', function ($scope) {
+    scrollTop();
+    scrollReval();
+
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(5);
+    });
+});
+
+portfolioApp.controller('projectNerdsController', function ($scope) {
+    scrollTop();
+    scrollReval();
+
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(6);
+    });
 });

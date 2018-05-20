@@ -841,3 +841,19 @@ header ul li a {
         width: 100%;
     }
 }
+
+/* browsing buttons for project pages */
+
+.browse-buttons {
+    text-align: center;
+}
+
+.browse-buttons .prev-button, .browse-buttons .next-button{
+    margin: 20px;
+    background: none;
+}
+
+.browse-buttons button:focus, .browse-buttons button:active{
+    outline: none !important;
+    box-shadow: none;
+}
