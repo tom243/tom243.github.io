@@ -176,7 +176,7 @@ header .hamburger-inner, header .hamburger-inner:after, header .hamburger-inner:
 header #logo-mobile {
     position: absolute;
     left: 10px;
-    top: 6px;
+    top: 4px;
     display: inline-block;
     width: 80px;
     z-index: 10;
@@ -194,6 +194,7 @@ header nav {
     z-index: 10;
     position: fixed !important;
     width: 100%;
+    padding: 15px;
 }
 
 header nav .navbar-collapse {
@@ -360,7 +361,7 @@ header ul li a {
 
 #contact .container-contact {
     width: 30%;
-    margin:  0 auto 40px;
+    margin:  0 auto;
 }
 
 @media (max-width: 961px) {
@@ -386,8 +387,29 @@ header ul li a {
     float: left;
 }
 
+#contact .contact-details .email span {
+    margin-left: 2px;
+}
+
 #contact .contact-details .phone {
     float: right;
+}
+
+@media (max-width: 961px) {
+
+    #contact .contact-details .phone {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    #contact .contact-details .email {
+        float: none;
+        margin-bottom: 5px;
+    }
+
+    #contact .contact-details .divider {
+        display: none;
+    }
 }
 
 #contact .contact-details{
@@ -418,13 +440,14 @@ header ul li a {
 }
 
 #contact #contact-form .submit-button {
-    margin-top: 30px;
+    margin-top: 20px;
     background-color: #000000;
     font-size: 15px;
     border: none;
     width: 100px;
     margin-left: calc(100% - 100px);
     font-family: RobotoRegular, sans-serif;
+    border-radius: 0;
 }
 
 #contact #contact-form input[type="text"], #contact #contact-form input[type="tel"],
