@@ -222,13 +222,29 @@ portfolioApp.controller('projectBrochureController', function ($scope) {
 portfolioApp.controller('projectCvMatcher', function ($scope) {
 
     function normalizeVideoWidth() {
-        var width = $("#cv-matcher .images > img").width();
+        var width = $("#cv-matcher .images > img:nth-child(1) ").width();
         $("#cv-matcher #cv-matcher-video").css("width", width);
         $("#cv-matcher #cv-matcher-video > video").css("width", width);
+    };
+
+    var flag = false;
+
+    function checkFlag() {
+
+        var width = $("#cv-matcher .images > img:nth-child(1) ").width();
+        if (width !== 0) {
+            flag = true;
+        }
+
+        if(flag === false) {
+            window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds*/
+        } else {
+            normalizeVideoWidth();
+        }
     }
 
     angular.element(document).ready(function () {
-        normalizeVideoWidth();
+        checkFlag();
         $(window).resize(function () {
             normalizeVideoWidth();
         });
