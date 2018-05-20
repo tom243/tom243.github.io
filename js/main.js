@@ -50,7 +50,7 @@ function scrollReval() {
 
         // Change when an element is considered in the viewport. The default value
         // of 0.20 means 20% of an element must be visible for its reveal to occur.
-        viewFactor: 0.2,
+        viewFactor: 0.1,
 
         // Pixel values that alter the container boundaries.
         // e.g. Set `{ top: 48 }`, if you have a 48px tall fixed toolbar.

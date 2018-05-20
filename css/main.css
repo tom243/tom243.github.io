@@ -624,6 +624,10 @@ header ul li a {
     }
 }
 
+#magazine .images {
+    margin-bottom: 60px;
+}
+
 #magazine .images img {
     margin: 0 auto;
     display: block;
@@ -672,6 +676,10 @@ header ul li a {
     }
 }
 
+#nerds .images {
+    margin-bottom: 60px;
+}
+
 #nerds .images img {
     margin: 0 auto;
     display: block;
@@ -718,6 +726,10 @@ header ul li a {
     #fastlane .project-description br {
         display: none;
     }
+}
+
+#fastlane .images {
+    margin-bottom: 60px;
 }
 
 #fastlane .images img {
