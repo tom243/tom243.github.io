@@ -197,6 +197,15 @@ header nav {
     padding: 15px !important;
 }
 
+header nav .navbar-nav {
+    margin-top: 10px;
+}
+
+header nav .nav-link {
+    letter-spacing: 1px;
+    margin-right: 15px;
+}
+
 header nav .navbar-collapse {
     text-align: right;
 }
@@ -335,6 +344,7 @@ header ul li a {
 
 #about .project-description {
     position: relative;
+    padding-bottom: 40px;
 }
 
 #about .project-description p {
@@ -344,6 +354,10 @@ header ul li a {
     font-size: 13.5px;
     line-height: 24px;
     font-family: RobotoLight, sans-serif;
+}
+
+#about .project-description .thing-i-love p{
+    font-size: 15px;
 }
 
 #about .project-description .cv {
@@ -387,6 +401,14 @@ header ul li a {
 #contact .container-contact {
     width: 30%;
     margin:  0 auto;
+}
+
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+    #contact .container-contact {
+        width: 25%;
+    }
+
 }
 
 @media (max-width: 961px) {

@@ -208,6 +208,19 @@ portfolioApp.controller('aboutController', function ($scope) {
 
 portfolioApp.controller('contactController', function ($scope) {
     scrollTop();
+
+    $scope.sendEmail = function() {
+        // parameters: service_id, template_id, template_parameters
+        emailjs.send("default_service","portfolio_template",{name: "James", notes: "Check this out!"})
+            .then(function(response) {
+                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+            }, function(err) {
+                console.log("FAILED. error=", err);
+            });
+    };
+
+
+
 });
 
 portfolioApp.controller('projectBrochureController', function ($scope) {
