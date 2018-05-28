@@ -732,6 +732,35 @@ header ul li a {
     display: block;
 }
 
+/* Weddings project */
+
+#weddings .headline {
+    margin-bottom: 20px;
+}
+
+#weddings .headline h1 {
+    text-align: center;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#weddings .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+
+#weddings .images {
+    margin-bottom: 60px;
+}
+
+#weddings .images img {
+    margin: 0 auto;
+    display: block;
+}
+
 /* fastlane project */
 
 #fastlane .headline {

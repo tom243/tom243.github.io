@@ -112,7 +112,7 @@ function EnableBrowserButtons(index) {
 
 var projectArr = [
     "project-brochure", "project-cv-matcher", "project-fashion", "project-fastlane", "project-lana", "project-magazine",
-    "project-nerds"
+    "project-nerds", "project-weddings"
 ];
 
 /* End Common vars */
@@ -193,6 +193,12 @@ portfolioApp.config(function ($routeProvider) {
         .when('/project-nerds', {
             templateUrl: 'pages/project-nerds.html',
             controller: 'projectNerdsController'
+        })
+
+        // route for the project-weddings page
+        .when('/project-weddings', {
+            templateUrl: 'pages/project-weddings.html',
+            controller: 'projectWeddingsController'
         });
 
 });
@@ -209,9 +215,9 @@ portfolioApp.controller('aboutController', function ($scope) {
 portfolioApp.controller('contactController', function ($scope) {
     scrollTop();
 
-    $scope.sendEmail = function() {
+    $scope.sendEmail = function(inputName, inputTel, inputEmail, inputMessage) {
         // parameters: service_id, template_id, template_parameters
-        emailjs.send("default_service","portfolio_template",{name: "James", notes: "Check this out!"})
+        emailjs.send("default_service","portfolio_template",{name: inputName, notes: inputMessage})
             .then(function(response) {
                 console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
             }, function(err) {
@@ -219,8 +225,15 @@ portfolioApp.controller('contactController', function ($scope) {
             });
     };
 
+});
 
+portfolioApp.controller('projectWeddingsController', function ($scope) {
+    scrollTop();
+    scrollReval();
 
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(0);
+    });
 });
 
 portfolioApp.controller('projectBrochureController', function ($scope) {
