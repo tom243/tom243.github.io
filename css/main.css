@@ -550,7 +550,7 @@ header ul li a {
 @media (max-width: 961px) {
 
     #cv-matcher .project-description p {
-        width: 80%;
+        width: 65%;
     }
 
     #cv-matcher .project-description br {
