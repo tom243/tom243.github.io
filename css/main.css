@@ -160,7 +160,7 @@ header .hamburger-box {
 }
 
 header .hamburger {
-    
+    padding: 11px 15px 15px;
 }
 
 header .hamburger:focus, header .hamburger:active{
