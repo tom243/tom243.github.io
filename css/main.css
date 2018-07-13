@@ -930,6 +930,110 @@ header ul li a {
     }
 }
 
+/* cafe kadosh project */
+
+#cafe-kadosh .headline {
+    margin-bottom: 20px;
+}
+
+#cafe-kadosh .headline h1 {
+    text-align: center;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#cafe-kadosh .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+#cafe-kadosh .project-description {
+    margin-bottom: 50px;
+}
+
+#cafe-kadosh .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 10px auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+@media (max-width: 961px) {
+
+    #cafe-kadosh .project-description p {
+        width: 80%;
+    }
+
+    #cafe-kadosh .project-description br {
+        display: none;
+    }
+}
+
+#cafe-kadosh .rectangle-background {
+    position: relative;
+    height: 900px;
+    background: url(https://res.cloudinary.com/sharedmoments/image/upload/v1531479233/MaayanResume/cafe-kadosh/rectangle-background.png) no-repeat;
+    background-size: 100% 478px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#cafe-kadosh .scroll-image{
+    padding: 25px 0 25px 25px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    width: 80%;
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+}
+
+#cafe-kadosh .scroll-image .image-wrap {
+    overflow-y: scroll;
+    height: 600px;
+}
+
+#cafe-kadosh .scroll-image .image-wrap::-webkit-scrollbar {
+    background-color: #ffffff;
+}
+
+#cafe-kadosh .scroll-image .image-wrap::-webkit-scrollbar-thumb {
+    background-color: #fad961;
+    outline: 2px solid slategrey;
+}
+
+@media (max-width: 961px) {
+
+    #cafe-kadosh .rectangle-background {
+        height: 500px;
+        background-size: 100% 200px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    #cafe-kadosh .scroll-image{
+        padding: 10px 0 10px 10px;
+    }
+
+    #cafe-kadosh .scroll-image .image-wrap {
+        height: 300px;
+    }
+
+    #cafe-kadosh .scroll-image .image-wrap::-webkit-scrollbar {
+        background-color: #ffffff;
+    }
+
+    #cafe-kadosh .scroll-image .image-wrap::-webkit-scrollbar-thumb {
+        background-color: #fad961;
+        outline: 2px solid slategrey;
+    }
+}
+
 /* browsing buttons for project pages */
 
 .browse-buttons {

@@ -111,7 +111,7 @@ function EnableBrowserButtons(index) {
 /* Common vars */
 
 var projectArr = [
-    "project-brochure", "project-cv-matcher", "project-fashion", "project-fastlane", "project-lana", "project-magazine",
+    "project-brochure", "project-cv-matcher", "project-fashion", "project-fastlane", "project-lana", "project-cafe-kadosh",
     "project-nerds", "project-weddings"
 ];
 
@@ -183,10 +183,10 @@ portfolioApp.config(function ($routeProvider) {
             controller: 'projectLanaController'
         })
 
-        // route for the project-magazine page
-        .when('/project-magazine', {
-            templateUrl: 'pages/project-magazine.html',
-            controller: 'projectMagazineController'
+        // route for the project-cafe-kadosh
+        .when('/project-cafe-kadosh', {
+            templateUrl: 'pages/project-cafe-kadosh.html',
+            controller: 'projectCafeKadoshController'
         })
 
         // route for the project-nerds page
@@ -214,17 +214,6 @@ portfolioApp.controller('aboutController', function ($scope) {
 
 portfolioApp.controller('contactController', function ($scope) {
     scrollTop();
-
-    $scope.sendEmail = function(inputName, inputTel, inputEmail, inputMessage) {
-        // parameters: service_id, template_id, template_parameters
-        emailjs.send("default_service","portfolio_template",{name: inputName, notes: inputMessage})
-            .then(function(response) {
-                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-            }, function(err) {
-                console.log("FAILED. error=", err);
-            });
-    };
-
 });
 
 portfolioApp.controller('projectWeddingsController', function ($scope) {
@@ -251,7 +240,7 @@ portfolioApp.controller('projectCvMatcher', function ($scope) {
         var width = $("#cv-matcher .images > img:nth-child(1) ").width();
         $("#cv-matcher #cv-matcher-video").css("width", width);
         $("#cv-matcher #cv-matcher-video > video").css("width", width);
-    };
+    }
 
     var flag = false;
 
@@ -310,16 +299,16 @@ portfolioApp.controller('projectLanaController', function ($scope) {
 
 });
 
-portfolioApp.controller('projectMagazineController', function ($scope) {
+portfolioApp.controller('projectNerdsController', function ($scope) {
     scrollTop();
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(5);
+        EnableBrowserButtons(6);
     });
 });
 
-portfolioApp.controller('projectNerdsController', function ($scope) {
+portfolioApp.controller('projectCafeKadoshController', function ($scope) {
     scrollTop();
     scrollReval();
 
