@@ -85,6 +85,11 @@ textarea {
 }
 
 @font-face {
+    font-family: Montserrat-Bold;
+    src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
     font-family: MontserratExtraBold;
     src: url("../fonts/Montserrat-ExtraBold.ttf");
 }
@@ -973,65 +978,148 @@ header ul li a {
     }
 }
 
-#cafe-kadosh .rectangle-background {
+#cafe-kadosh .web-design {
     position: relative;
     height: 900px;
-    background: url(https://res.cloudinary.com/sharedmoments/image/upload/v1531479233/MaayanResume/cafe-kadosh/rectangle-background.png) no-repeat;
+    background: url("https://res.cloudinary.com/sharedmoments/image/upload/v1531494992/MaayanResume/cafe-kadosh/rectangle-background2.png") no-repeat;
     background-size: 100% 478px;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 
-#cafe-kadosh .scroll-image{
+#cafe-kadosh .web-design .scroll-image {
     padding: 25px 0 25px 25px;
     background-color: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%; /* position the left edge of the element at the middle of the parent */
     width: 80%;
-    transform: translate(-50%, -50%); /* This is a shorthand of
-                                         translateX(-50%) and translateY(-50%) */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#cafe-kadosh .scroll-image .image-wrap {
+#cafe-kadosh .web-design .scroll-image .image-wrap {
     overflow-y: scroll;
     height: 600px;
 }
 
-#cafe-kadosh .scroll-image .image-wrap::-webkit-scrollbar {
+#cafe-kadosh .web-design .scroll-image .image-wrap img{
+    width: 100%;
+}
+
+#cafe-kadosh .web-design .scroll-image .image-wrap::-webkit-scrollbar {
     background-color: #ffffff;
 }
 
-#cafe-kadosh .scroll-image .image-wrap::-webkit-scrollbar-thumb {
+#cafe-kadosh .web-design .scroll-image .image-wrap::-webkit-scrollbar-thumb {
     background-color: #fad961;
     outline: 2px solid slategrey;
 }
 
+#cafe-kadosh .mobile-design {
+    background: url("https://res.cloudinary.com/sharedmoments/image/upload/v1531501890/MaayanResume/cafe-kadosh/rectangle-background2.png"),
+    url("https://res.cloudinary.com/sharedmoments/image/upload/v1531501262/MaayanResume/cafe-kadosh/rectangle-background3.png");
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+    height: 1000px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto 100px;
+}
+
+#cafe-kadosh .mobile-design .mobile-design-desc {
+    margin-left: 7%;
+    padding-top: 205px;
+}
+
+#cafe-kadosh .mobile-design .mobile-design-desc h2 {
+    font-size: 27px;
+    color: #ffffff;
+    letter-spacing: 3.16px;
+    font-family: Montserrat-Bold, sans-serif;
+}
+
+#cafe-kadosh .mobile-design .mobile-design-desc p {
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 26px;
+}
+
+#cafe-kadosh .mobile-design .iphone1, #cafe-kadosh .mobile-design .iphone2, #cafe-kadosh .mobile-design .iphone3{
+    position: absolute;
+}
+
+#cafe-kadosh .mobile-design .iphone1 {
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    top: 39%;
+}
+
+#cafe-kadosh .mobile-design .iphone2 {
+    bottom: -70px;
+    left: 10%;
+}
+
+#cafe-kadosh .mobile-design .iphone3 {
+    bottom: -70px;
+    right: 10%;
+}
+
+#cafe-kadosh .mobile-design .iphone-for-mobile {
+    display: none;
+}
+
 @media (max-width: 961px) {
 
-    #cafe-kadosh .rectangle-background {
+    #cafe-kadosh .web-design {
         height: 500px;
         background-size: 100% 200px;
         width: 95%;
         margin: 0 auto;
     }
 
-    #cafe-kadosh .scroll-image{
+    #cafe-kadosh .web-design .scroll-image{
         padding: 10px 0 10px 10px;
     }
 
-    #cafe-kadosh .scroll-image .image-wrap {
+    #cafe-kadosh .web-design .scroll-image .image-wrap {
         height: 300px;
     }
 
-    #cafe-kadosh .scroll-image .image-wrap::-webkit-scrollbar {
-        background-color: #ffffff;
+    #cafe-kadosh .mobile-design .iphone1 {
+        display: none;
     }
 
-    #cafe-kadosh .scroll-image .image-wrap::-webkit-scrollbar-thumb {
-        background-color: #fad961;
-        outline: 2px solid slategrey;
+    #cafe-kadosh .mobile-design .iphone2 {
+        display: none;
     }
+
+    #cafe-kadosh .mobile-design .iphone3 {
+        display: none;
+    }
+
+    #cafe-kadosh .mobile-design .iphone-for-mobile {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #cafe-kadosh .mobile-design {
+        height: 300px;
+        margin: 0 auto 200px;
+    }
+
+    #cafe-kadosh .mobile-design .mobile-design-desc{
+        text-align: center;
+        margin: 0;
+        padding: 40px 10px 10px;
+    }
+
+    #cafe-kadosh .mobile-design .mobile-design-desc p br{
+        display: none;
+    }
+
 }
 
 /* browsing buttons for project pages */
