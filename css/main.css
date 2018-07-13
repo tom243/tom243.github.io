@@ -1009,6 +1009,8 @@ header ul li a {
 
 #cafe-kadosh .web-design .scroll-image .image-wrap::-webkit-scrollbar {
     background-color: #ffffff;
+    width: 10px;
+    outline: none;
 }
 
 #cafe-kadosh .web-design .scroll-image .image-wrap::-webkit-scrollbar-thumb {
