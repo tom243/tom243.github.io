@@ -1139,3 +1139,15 @@ header ul li a {
     outline: none !important;
     box-shadow: none;
 }
+
+/* copyrights */
+
+.copyrights {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.copyrights p {
+    font-size: 12px;
+    font-family: RobotoRegular, sans-serif;
+}
