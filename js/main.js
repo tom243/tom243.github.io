@@ -112,7 +112,7 @@ function EnableBrowserButtons(index) {
 
 var projectArr = [
     "project-brochure", "project-cv-matcher", "project-fashion", "project-fastlane", "project-lana", "project-cafe-kadosh",
-    "project-nerds", "project-weddings"
+    "project-gali-website", "project-weddings"
 ];
 
 /* End Common vars */
@@ -189,10 +189,10 @@ portfolioApp.config(function ($routeProvider) {
             controller: 'projectCafeKadoshController'
         })
 
-        // route for the project-nerds page
-        .when('/project-nerds', {
-            templateUrl: 'pages/project-nerds.html',
-            controller: 'projectNerdsController'
+        // route for the project-gali-website page
+        .when('/project-gali-website', {
+            templateUrl: 'pages/project-gali-website.html',
+            controller: 'projectGaliWebsiteController'
         })
 
         // route for the project-weddings page
@@ -299,12 +299,12 @@ portfolioApp.controller('projectLanaController', function ($scope) {
 
 });
 
-portfolioApp.controller('projectNerdsController', function ($scope) {
+portfolioApp.controller('projectGaliWebsiteController', function ($scope) {
     scrollTop();
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(6);
+        EnableBrowserButtons(5);
     });
 });
 

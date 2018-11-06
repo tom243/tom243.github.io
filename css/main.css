@@ -1124,6 +1124,78 @@ header ul li a {
 
 }
 
+/* gali website project */
+
+#gali-website .gali-website-container {
+    margin-bottom: 60px;
+}
+
+#gali-website .headline {
+    margin-bottom: 20px;
+}
+
+#gali-website .headline h1 {
+    text-align: center;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#gali-website .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+#gali-website .project-description {
+    margin-bottom: 50px;
+}
+
+#gali-website .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 18px auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+@media (max-width: 961px) {
+
+    #gali-website .project-description p {
+        width: 80%;
+    }
+
+    #gali-website .project-description br {
+        display: none;
+    }
+}
+
+#gali-website .rectangle-box {
+    width: 80%;
+    height: 300px;
+    background: #B88AEB linear-gradient(to right, #B88AEB, #03a9f4);
+    margin: 0 auto -220px;
+    opacity: 0.6;
+}
+
+#gali-website .gali-website-container #gali-website-video {
+    position: relative;
+}
+
+#gali-website .gali-website-container #gali-website-video video {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 961px) {
+
+    #gali-website .gali-website-container #gali-website-video video {
+        width: 100%;
+    }
+}
+
 /* browsing buttons for project pages */
 
 .browse-buttons {
