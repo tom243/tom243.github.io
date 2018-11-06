@@ -111,8 +111,8 @@ function EnableBrowserButtons(index) {
 /* Common vars */
 
 var projectArr = [
-    "project-brochure", "project-cv-matcher", "project-fashion", "project-fastlane", "project-lana", "project-cafe-kadosh",
-    "project-gali-website", "project-weddings"
+    "project-weddings", "project-brochure", "project-cv-matcher", "project-fashion", "project-fastlane", "project-lana", "project-cafe-kadosh",
+    "project-gali-website"
 ];
 
 /* End Common vars */
@@ -230,7 +230,7 @@ portfolioApp.controller('projectBrochureController', function ($scope) {
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(0);
+        EnableBrowserButtons(1);
     });
 });
 
@@ -263,7 +263,7 @@ portfolioApp.controller('projectCvMatcher', function ($scope) {
         $(window).resize(function () {
             normalizeVideoWidth();
         });
-        EnableBrowserButtons(1);
+        EnableBrowserButtons(2);
     });
 
     scrollTop();
@@ -274,7 +274,7 @@ portfolioApp.controller('projectFashionController', function ($scope) {
     scrollTop();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(2);
+        EnableBrowserButtons(3);
     });
 
 });
@@ -284,7 +284,7 @@ portfolioApp.controller('projectFastlaneController', function ($scope) {
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(3);
+        EnableBrowserButtons(4);
     });
 
 });
@@ -294,18 +294,9 @@ portfolioApp.controller('projectLanaController', function ($scope) {
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(4);
-    });
-
-});
-
-portfolioApp.controller('projectGaliWebsiteController', function ($scope) {
-    scrollTop();
-    scrollReval();
-
-    angular.element(document).ready(function () {
         EnableBrowserButtons(5);
     });
+
 });
 
 portfolioApp.controller('projectCafeKadoshController', function ($scope) {
@@ -314,5 +305,14 @@ portfolioApp.controller('projectCafeKadoshController', function ($scope) {
 
     angular.element(document).ready(function () {
         EnableBrowserButtons(6);
+    });
+});
+
+portfolioApp.controller('projectGaliWebsiteController', function ($scope) {
+    scrollTop();
+    scrollReval();
+
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(7);
     });
 });
