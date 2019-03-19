@@ -111,7 +111,7 @@ function EnableBrowserButtons(index) {
 /* Common vars */
 
 var projectArr = [
-    "project-fastlane", "project-fashion", "project-cafe-kadosh", "project-cv-matcher", "project-gali-website",
+    "project-terra-vida", "project-fastlane", "project-fashion", "project-cafe-kadosh", "project-cv-matcher", "project-gali-website",
     "project-lana",  "project-brochure", "project-weddings"
 ];
 
@@ -199,6 +199,12 @@ portfolioApp.config(function ($routeProvider) {
         .when('/project-weddings', {
             templateUrl: 'pages/project-weddings.html',
             controller: 'projectWeddingsController'
+        })
+
+        // route for the project-terra-vida page
+        .when('/project-terra-vida', {
+            templateUrl: 'pages/project-terra-vida.html',
+            controller: 'projectTerraVidaController'
         });
 
 });
@@ -216,7 +222,7 @@ portfolioApp.controller('contactController', function ($scope) {
     scrollTop();
 });
 
-portfolioApp.controller('projectFastlaneController', function ($scope) {
+portfolioApp.controller('projectTerraVidaController', function ($scope) {
     scrollTop();
     scrollReval();
 
@@ -226,11 +232,21 @@ portfolioApp.controller('projectFastlaneController', function ($scope) {
 
 });
 
+portfolioApp.controller('projectFastlaneController', function ($scope) {
+    scrollTop();
+    scrollReval();
+
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(1);
+    });
+
+});
+
 portfolioApp.controller('projectFashionController', function ($scope) {
     scrollTop();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(1);
+        EnableBrowserButtons(2);
     });
 
 });
@@ -240,7 +256,7 @@ portfolioApp.controller('projectCafeKadoshController', function ($scope) {
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(2);
+        EnableBrowserButtons(3);
     });
 });
 
@@ -273,7 +289,7 @@ portfolioApp.controller('projectCvMatcher', function ($scope) {
         $(window).resize(function () {
             normalizeVideoWidth();
         });
-        EnableBrowserButtons(3);
+        EnableBrowserButtons(4);
     });
 
     scrollTop();
@@ -285,7 +301,7 @@ portfolioApp.controller('projectGaliWebsiteController', function ($scope) {
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(4);
+        EnableBrowserButtons(5);
     });
 });
 
@@ -294,7 +310,7 @@ portfolioApp.controller('projectLanaController', function ($scope) {
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(5);
+        EnableBrowserButtons(6);
     });
 
 });
@@ -304,7 +320,7 @@ portfolioApp.controller('projectBrochureController', function ($scope) {
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(6);
+        EnableBrowserButtons(7);
     });
 });
 
@@ -313,7 +329,7 @@ portfolioApp.controller('projectWeddingsController', function ($scope) {
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(7);
+        EnableBrowserButtons(8);
     });
 });
 

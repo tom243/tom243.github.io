@@ -1196,6 +1196,64 @@ header ul li a {
     }
 }
 
+/* terra vida website project */
+
+#terra-vida .terra-vida-container {
+    margin-bottom: 60px;
+}
+
+#terra-vida .headline {
+    margin-bottom: 20px;
+}
+
+#terra-vida .headline h1 {
+    text-align: center;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#terra-vida .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+#terra-vida .project-description {
+    margin-bottom: 50px;
+}
+
+#terra-vida .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 18px auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+#terra-vida .images {
+    margin-bottom: 60px;
+    background-color: #F7F7F7;
+}
+
+#terra-vida .images img {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+}
+
+@media (max-width: 961px) {
+
+    #terra-vida.project-description p {
+        width: 80%;
+    }
+
+    #terra-vida .project-description br {
+        display: none;
+    }
+}
+
 /* browsing buttons for project pages */
 
 .browse-buttons {
