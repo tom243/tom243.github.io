@@ -1254,6 +1254,121 @@ header ul li a {
     }
 }
 
+/* meter app website project */
+
+#meter-app .meter-app-container {
+    margin-bottom: 60px;
+}
+
+#meter-app .headline {
+    margin-bottom: 20px;
+}
+
+#meter-app .headline h1 {
+    text-align: center;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#meter-app .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+#meter-app .project-description {
+    margin-bottom: 50px;
+}
+
+#meter-app .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 18px auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+#meter-app .images {
+    margin-bottom: 60px;
+}
+
+#meter-app .images img {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+}
+
+@media (max-width: 961px) {
+
+    #meter-app.project-description p {
+        width: 80%;
+    }
+
+    #meter-app .project-description br {
+        display: none;
+    }
+}
+
+/* banners app website project */
+
+#banners .banners-container {
+    margin-bottom: 60px;
+}
+
+#banners .headline {
+    margin-bottom: 20px;
+}
+
+#banners .headline h1 {
+    text-align: center;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#banners .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+#banners .project-description {
+    margin-bottom: 50px;
+}
+
+#banners .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 18px auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+#banners .images {
+    margin-bottom: 60px;
+}
+
+#banners .images img {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+}
+
+@media (max-width: 961px) {
+
+    #banners.project-description p {
+        width: 80%;
+    }
+
+    #banners .project-description br {
+        display: none;
+    }
+}
+
+
 /* browsing buttons for project pages */
 
 .browse-buttons {
