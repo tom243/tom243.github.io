@@ -111,8 +111,8 @@ function EnableBrowserButtons(index) {
 /* Common vars */
 
 var projectArr = [
-    "project-terra-vida", "project-fastlane", "project-fashion", "project-cafe-kadosh", "project-meter-app",
-    "project-cv-matcher", "project-gali-website", "project-banners", "project-lana",  "project-brochure", "project-weddings"
+    "project-terra-vida", "project-oriel-malester", "project-gali-website", "project-cafe-kadosh", "project-meter-app",
+    "project-fastlane", "project-cv-matcher", "project-fashion", "project-banners", "project-lana",  "project-brochure", "project-weddings"
 ];
 
 /* End Common vars */
@@ -218,6 +218,12 @@ portfolioApp.config(function ($routeProvider) {
         .when('/project-banners', {
             templateUrl: 'pages/project-banners.html',
             controller: 'projectBannersController'
+        })
+
+        // route for the project-oriel-malester page
+        .when('/project-oriel-malester', {
+            templateUrl: 'pages/project-oriel-malester.html',
+            controller: 'projectOrielMalesterController'
         });
 
 });
@@ -245,7 +251,7 @@ portfolioApp.controller('projectTerraVidaController', function ($scope) {
 
 });
 
-portfolioApp.controller('projectFastlaneController', function ($scope) {
+portfolioApp.controller('projectOrielMalesterController', function ($scope) {
     scrollTop();
     scrollReval();
 
@@ -255,13 +261,13 @@ portfolioApp.controller('projectFastlaneController', function ($scope) {
 
 });
 
-portfolioApp.controller('projectFashionController', function ($scope) {
+portfolioApp.controller('projectGaliWebsiteController', function ($scope) {
     scrollTop();
+    scrollReval();
 
     angular.element(document).ready(function () {
         EnableBrowserButtons(2);
     });
-
 });
 
 portfolioApp.controller('projectCafeKadoshController', function ($scope) {
@@ -280,6 +286,16 @@ portfolioApp.controller('projectMeterAppController', function ($scope) {
     angular.element(document).ready(function () {
         EnableBrowserButtons(4);
     });
+});
+
+portfolioApp.controller('projectFastlaneController', function ($scope) {
+    scrollTop();
+    scrollReval();
+
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(5);
+    });
+
 });
 
 portfolioApp.controller('projectCvMatcher', function ($scope) {
@@ -311,25 +327,15 @@ portfolioApp.controller('projectCvMatcher', function ($scope) {
         $(window).resize(function () {
             normalizeVideoWidth();
         });
-        EnableBrowserButtons(5);
-    });
-
-    scrollTop();
-    scrollReval();
-});
-
-portfolioApp.controller('projectGaliWebsiteController', function ($scope) {
-    scrollTop();
-    scrollReval();
-
-    angular.element(document).ready(function () {
         EnableBrowserButtons(6);
     });
-});
 
-portfolioApp.controller('projectBannersController', function ($scope) {
     scrollTop();
     scrollReval();
+});
+
+portfolioApp.controller('projectFashionController', function ($scope) {
+    scrollTop();
 
     angular.element(document).ready(function () {
         EnableBrowserButtons(7);
@@ -337,7 +343,7 @@ portfolioApp.controller('projectBannersController', function ($scope) {
 
 });
 
-portfolioApp.controller('projectLanaController', function ($scope) {
+portfolioApp.controller('projectBannersController', function ($scope) {
     scrollTop();
     scrollReval();
 
@@ -347,12 +353,22 @@ portfolioApp.controller('projectLanaController', function ($scope) {
 
 });
 
-portfolioApp.controller('projectBrochureController', function ($scope) {
+portfolioApp.controller('projectLanaController', function ($scope) {
     scrollTop();
     scrollReval();
 
     angular.element(document).ready(function () {
         EnableBrowserButtons(9);
+    });
+
+});
+
+portfolioApp.controller('projectBrochureController', function ($scope) {
+    scrollTop();
+    scrollReval();
+
+    angular.element(document).ready(function () {
+        EnableBrowserButtons(10);
     });
 });
 
@@ -361,6 +377,6 @@ portfolioApp.controller('projectWeddingsController', function ($scope) {
     scrollReval();
 
     angular.element(document).ready(function () {
-        EnableBrowserButtons(10);
+        EnableBrowserButtons(11);
     });
 });

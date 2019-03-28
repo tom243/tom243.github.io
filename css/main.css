@@ -1311,7 +1311,7 @@ header ul li a {
     }
 }
 
-/* banners app website project */
+/* banners website project */
 
 #banners .banners-container {
     margin-bottom: 60px;
@@ -1368,6 +1368,62 @@ header ul li a {
     }
 }
 
+/* oriel-malester website project */
+
+#oriel-malester .oriel-malester-container {
+    margin-bottom: 60px;
+}
+
+#oriel-malester .headline {
+    margin-bottom: 20px;
+}
+
+#oriel-malester .headline h1 {
+    text-align: center;
+    font-family: MontserratMedium, sans-serif;
+    font-size: 30px;
+}
+
+#oriel-malester .headline .decoration {
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+#oriel-malester .project-description {
+    margin-bottom: 50px;
+}
+
+#oriel-malester .project-description p {
+    text-align: center;
+    width: 100%;
+    margin: 18px auto;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: RobotoLight, sans-serif;
+}
+
+#oriel-malester .images {
+    margin-bottom: 60px;
+}
+
+#oriel-malester .images img {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+}
+
+@media (max-width: 961px) {
+
+    #oriel-malester.project-description p {
+        width: 80%;
+    }
+
+    #oriel-malester .project-description br {
+        display: none;
+    }
+}
 
 /* browsing buttons for project pages */
 
