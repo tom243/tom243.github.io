@@ -121,12 +121,40 @@ var projectArr = [
 
 angular.element(document).ready(function () {
 
-    $(".navbar-toggler").click(function () {
+   /* $(".navbar-toggler").click(function () {
         $(this).toggleClass("is-active");
     });
 
     $('.navbar-nav a').on('click', function () {
         $('.navbar-toggler').click() //bootstrap 3.x by Richard
+    });
+*/
+
+    // New menu js
+
+    $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+    });
+
+    $('#dismiss, .overlay').on('click', function () {
+        // hide sidebar
+        $('#sidebar').removeClass('active');
+        // hide overlay
+        $('.overlay').removeClass('active');
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+        // open sidebar
+        $('#sidebar').addClass('active');
+        // fade in the overlay
+        $('.overlay').addClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
+    $('#sidebar ul li a').on('click', function () {
+        $('#sidebar ul li a').removeClass("active");
+        $(this).addClass("active");
     });
 
 });

@@ -25,16 +25,27 @@
     <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/hamburgers.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
     <link rel="stylesheet" href="css/main.css?v=1.0.5">
 
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/scrollreveal@3.4.0/dist/scrollreveal.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
     <!-- load angular and angular route via CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
@@ -43,36 +54,55 @@
 </head>
 <body ng-controller="mainController">
 
-    <header>
-        <nav class="navbar navbar-light bg-white">
-            <a href="#">
-                <img id="logo-mobile" src="https://res.cloudinary.com/sharedmoments/image/upload/v1527683506/MaayanResume/general/logo.png"/>
-            </a>
-            <button class="navbar-toggler hamburger hamburger--spin" type="button" data-toggle="collapse"
-                    data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">HOME</a>
-                    <a class="nav-item nav-link" href="#about">ABOUT</a>
-                    <a class="nav-item nav-link" href="#contact">CONTACT</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Sidebar -->
+    <nav id="sidebar">
 
-    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="dismiss">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+
+        <div class="sidebar-header">
+            <h3></h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p></p>
+            <li>
+                <<a class="nav-item nav-link active" href="#">HOME</a>
+            </li>
+            <li>
+                <a class="nav-item nav-link" href="#about">ABOUT</a>
+            </li>
+            <li>
+                <a class="nav-item nav-link" href="#contact">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Dark Overlay element -->
+    <div class="overlay"></div>
+
+    <!-- Page Content -->
     <div id="main">
 
-        <div ng-view></div>
-    </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
 
-    <div class="copyrights">
-        <p>Copyright © 2018 Maayan Eli Luster</p>
+                <a href="#">
+                    <img id="logo-mobile" src="https://res.cloudinary.com/sharedmoments/image/upload/v1527683506/MaayanResume/general/logo.png"/>
+                </a>
+
+                <button type="button" id="sidebarCollapse" class="btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
+        </nav>
+
+        <div ng-view></div>
+        <div class="copyrights">
+            <p>Copyright © 2018 Maayan Eli Luster</p>
+        </div>
     </div>
 
 </body>
