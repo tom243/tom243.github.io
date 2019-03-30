@@ -1245,7 +1245,7 @@ header ul li a {
 
 @media (max-width: 961px) {
 
-    #terra-vida.project-description p {
+    #terra-vida .project-description p {
         width: 80%;
     }
 
@@ -1302,7 +1302,7 @@ header ul li a {
 
 @media (max-width: 961px) {
 
-    #meter-app.project-description p {
+    #meter-app .project-description p {
         width: 80%;
     }
 
@@ -1359,7 +1359,7 @@ header ul li a {
 
 @media (max-width: 961px) {
 
-    #banners.project-description p {
+    #banners .project-description p {
         width: 80%;
     }
 
@@ -1416,7 +1416,7 @@ header ul li a {
 
 @media (max-width: 961px) {
 
-    #oriel-malester.project-description p {
+    #oriel-malester .project-description p {
         width: 80%;
     }
 
