@@ -1380,7 +1380,6 @@ body {
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     height: 80px;
 }
 
@@ -1500,6 +1499,7 @@ body {
 
     #logo-mobile {
         width: 59px;
+        top: 10px
     }
 
 }
