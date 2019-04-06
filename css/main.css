@@ -285,7 +285,13 @@ body {
 
 #about .about-pic img {
     width: 500px;
-    margin-right: 80px;
+}
+
+@media (max-width: 961px) {
+
+    #about .headline h2 {
+        margin-right: 0;
+    }
 }
 
 #about .person-description {
@@ -353,6 +359,19 @@ body {
     margin-bottom: 30px;
 }
 
+@media (max-width: 961px) {
+
+    #about .person-description .about-description .beliefs h3,
+    #about .person-description .about-description .passion h3,
+    #about .person-description .about-description .details h3,
+    #about .person-description .about-description .fast-learner h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+
 #about .person-description .about-description .beliefs,
 #about .person-description .about-description .passion,
 #about .person-description .about-description .details,
@@ -378,6 +397,7 @@ body {
     border-radius: 50%;
     display: inline-block;
 }
+
 .hvr-sweep-to-right:active, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:hover {
     color: #E781CA;
     border-radius: 50%;
