@@ -109,6 +109,11 @@ textarea {
     src: url("../fonts/Roboto-Regular.ttf");
 }
 
+@font-face {
+    font-family: BebasNeueRegular;
+    src: url("../fonts/BebasNeue-Regular.ttf");
+}
+
 body {
     font-family: MontserratRegular, sans-serif;
 }
@@ -244,14 +249,155 @@ body {
 /* About page */
 
 #about .headline {
-    margin-bottom: 40px;
+    margin-bottom: 110px;
 }
 
 #about .headline h1 {
-    text-align: center;
-    font-family: MontserratMedium, sans-serif;
-    font-size: 30px;
+    font-family: BebasNeueRegular, sans-serif;
+    font-size: 20px;
+    color: #e83e8c;
+    letter-spacing: 3px;
 }
+
+#about .headline h2 {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 45px;
+    color: #000000;
+}
+
+@media (max-width: 961px) {
+
+    #about .headline h2 {
+        font-size: 30px;
+    }
+}
+
+#about .headline .decoration {
+    width: 280px;
+    height: 5px;
+    background-color: #000000;
+}
+
+#about .about-pic {
+    text-align: right;
+    margin-bottom: 80px;
+}
+
+#about .about-pic img {
+    width: 50%;
+    margin-right: 80px;
+}
+
+#about .person-description {
+    background-color: #F8F8F8;
+    padding: 100px;
+}
+
+@media (max-width: 961px) {
+
+    #about .person-description {
+        padding: 18px;
+    }
+}
+
+#about .person-description .headline {
+    margin-bottom: 10px;
+    float: right;
+    padding-right:105px;
+}
+
+@media (max-width: 961px) {
+
+    #about .person-description .headline {
+        float: left;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+#about .person-description .about-description h2 {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 45px;
+    color: #000000;
+}
+
+@media (max-width: 961px) {
+
+    #about .person-description .about-description h2 {
+        font-size: 30px;
+    }
+}
+
+#about .person-description .about-description .decoration {
+    width: 280px;
+    height: 5px;
+    background-color: #000000;
+}
+
+#about .person-description .about-description .characteristics {
+    width: 60%;
+}
+
+@media (max-width: 961px) {
+
+    #about .person-description .about-description .characteristics {
+        width: 100%;
+    }
+}
+
+#about .person-description .about-description .beliefs h3,
+#about .person-description .about-description .passion h3,
+#about .person-description .about-description .details h3,
+#about .person-description .about-description .fast-learner h3 {
+    font-family: Montserrat-Bold;
+    margin-bottom: 30px;
+}
+
+#about .person-description .about-description .beliefs,
+#about .person-description .about-description .passion,
+#about .person-description .about-description .details,
+#about .person-description .about-description .fast-learner {
+    margin-bottom: 70px;
+}
+
+#about .person-description .cv a {
+    display: block;
+    font-family: Montserrat-Bold, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    width: 90px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#about .person-description .cv .dot {
+    height: 40px;
+    width: 40px;
+    background-color: #E781CA;
+    border-radius: 50%;
+    display: inline-block;
+}
+.hvr-sweep-to-right:active, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:hover {
+    color: #E781CA;
+    border-radius: 50%;
+}
+.hvr-sweep-to-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    border-radius: 50% !important;
+
+}
+
+/*
 
 #about .images {
     text-align: right;
@@ -310,6 +456,7 @@ body {
         display: none;
     }
 }
+*/
 
 /* Contact page*/
 
@@ -1362,13 +1509,6 @@ body {
     font-size: 12px;
     font-family: RobotoRegular, sans-serif;
 }
-
-
-
-
-
-
-
 
 /*.wrapper {*/
     /*display: block;*/
