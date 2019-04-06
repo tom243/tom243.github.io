@@ -268,12 +268,12 @@ body {
 @media (max-width: 961px) {
 
     #about .headline h2 {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
 #about .headline .decoration {
-    width: 280px;
+    width: 30%;
     height: 5px;
     background-color: #000000;
 }
@@ -284,7 +284,7 @@ body {
 }
 
 #about .about-pic img {
-    width: 50%;
+    width: 500px;
     margin-right: 80px;
 }
 
@@ -324,12 +324,12 @@ body {
 @media (max-width: 961px) {
 
     #about .person-description .about-description h2 {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
 #about .person-description .about-description .decoration {
-    width: 280px;
+    width: 30%;
     height: 5px;
     background-color: #000000;
 }
